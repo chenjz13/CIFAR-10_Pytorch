@@ -1,4 +1,4 @@
-**The full code is available [here](http://torch.ch/blog/2015/07/30/cifar.html), just clone it to your machine and it's ready to play. As a former Torch7 user, I attempt to reproduce the results from the [Torch7 post](http://torch.ch/blog/2015/07/30/cifar.html).**
+**The full code is available [here](https://github.com/BeierZhu/CIFAR-10_Pytorch/tree/master), just clone it to your machine and it's ready to play. As a former Torch7 user, I attempt to reproduce the results from the [Torch7 post](http://torch.ch/blog/2015/07/30/cifar.html).**
 
 My friends Wu Jun and Zhang Yujing claimed Batch Normalization[1] useless. I want to prove them wrong (打他们脸), and CIFAR-10 is a nice playground to start.
 
@@ -13,11 +13,11 @@ The post and the code consist of 2 parts/files:
 * model definition
 * training
 
-## The model Vgg.py
+## The model [Vgg.py](https://github.com/BeierZhu/CIFAR-10_Pytorch/blob/master/Vgg.py)
 
 It's a VGG16-like[2] (not identical, I remove the first FC layer) network with many 3x3 filters and padding 1,1 so the sizes of feature maps after them are unchanged. They are only changed after max-pooling. Weights of convolutional layers are initialized MSR-style. Batch Normalization and Dropout are used together.
 
-## Training train.py
+## Training [train.py](https://github.com/BeierZhu/CIFAR-10_Pytorch/blob/master/train.py)
 
 That's it, you can start training:
 
